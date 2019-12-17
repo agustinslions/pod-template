@@ -34,9 +34,6 @@ module Pod
       text = File.read("NAME.podspec")
       text.gsub!("7.0", "11.0")
       File.open("NAME.podspec", "w") { |file| file.puts text }
-
-      # remove podspec for osx
-      `rm ./NAME-osx.podspec`
     end
   end
 
